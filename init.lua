@@ -23,3 +23,6 @@ vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
 
 -- terminal
 vim.keymap.set('n', '<leader>h', ':belowright split | terminal<CR>', { noremap = true, silent = true })
+
+-- F9 disable highlight afre '/' or '?'
+vim.keymap.set('n', '<F9>', ':nohlsearch<CR>', { noremap = true, silent = true })

@@ -19,7 +19,6 @@ return {
     --
     -- See :h blink-cmp-config-keymap for defining your own keymap
     keymap = { preset = 'enter',
-        ['<Tab>'] = { 'show', 'show_documentation', 'hide_documentation' }
       },
 
     appearance = {
