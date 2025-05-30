@@ -11,6 +11,8 @@ vim.opt.number = true           -- Enable line numbers
 vim.opt.relativenumber = true   -- Enable relative line numbers
 vim.opt.foldmethod = 'syntax'  -- Fold based on syntax groups
 vim.opt.foldlevel = 99         -- Show all folds
+vim.o.showmode = false
+vim.o.cmdheight = 0
 
 vim.opt.fillchars:append({ eob = " " }) -- Hides ~ by replacing with spaces
 vim.opt.signcolumn = "yes" -- disable colum symbol ~
