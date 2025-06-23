@@ -35,3 +35,13 @@ vim.keymap.set('n', '<leader>h', ':belowright split | terminal<CR>', { noremap =
 
 -- F9 disable highlight afre '/' or '?'
 vim.keymap.set('n', '<F9>', ':nohlsearch<CR>', { noremap = true, silent = true })
+
+-- Define highlight group (yellow background)
+vim.api.nvim_command("highlight TodoHighlight guifg=Black guibg=Yellow")
+-- highligh TODO keyword
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+  pattern = "*",
+  callback = function()
+    vim.cmd([[match TodoHighlight /\v<TODO>/]])
+  end
+})
