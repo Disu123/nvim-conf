@@ -25,7 +25,13 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
   spec = {
     -- import your plugins
-    { "comfysage/evergarden", config = function() vim.cmd.colorscheme "evergarden" end },
+    {"xero/miasma.nvim" , config = function() vim.cmd.colorscheme "miasma" end },
+    -- { "comfysage/evergarden", config = function() vim.cmd.colorscheme "evergarden" end },
+    -- { "comfysage/evergarden", config = function() vim.cmd.colorscheme "evergarden" end },
+    -- { "comfysage/evergarden", config = function() vim.cmd.colorscheme "evergarden" end },
+	--{'ribru17/bamboo.nvim'},
+  --{ "comfysage/evergarden" },
+	--{"thesimonho/kanagawa-paper.nvim"},
     { import = "config.plugins" },
   },
   -- Configure any other settings here. See the documentation for more details.

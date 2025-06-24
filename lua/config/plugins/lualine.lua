@@ -9,7 +9,8 @@ return {
     end
 
     require('lualine').setup({
-      options = { theme = 'everforest' },
+      --options = { theme = 'everforest' },
+      options = { theme = 'auto'},
       sections = {
         lualine_a = { 'mode' },
         lualine_b = { 'branch' },
