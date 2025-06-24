@@ -16,10 +16,10 @@ vim.opt.foldlevel = 99         -- Show all folds
 vim.o.showmode = false         -- no --INSERT--
 vim.o.cmdheight = 0
 vim.opt.termguicolors = true
-vim.opt.cursorline = true  
+vim.opt.cursorline = true
 vim.opt.ignorecase = true
-vim.opt.smartcase = true   
-vim.opt.scrolloff = 8  
+vim.opt.smartcase = true
+vim.opt.scrolloff = 8
 
 vim.opt.fillchars:append({ eob = " " }) -- Hides ~ by replacing with spaces
 vim.opt.signcolumn = "yes" -- disable colum symbol ~
@@ -36,9 +36,14 @@ vim.keymap.set('n', '<leader>h', ':belowright split | terminal<CR>', { noremap =
 -- F9 disable highlight afre '/' or '?'
 vim.keymap.set('n', '<F9>', ':nohlsearch<CR>', { noremap = true, silent = true })
 
--- disable the howtodisablemouse menu
+-- disable the "howtodisablemouse" menu
 vim.cmd([[aunmenu PopUp.How-to\ disable\ mouse ]])
 vim.cmd([[aunmenu PopUp.-2-]])
+
+-- make :W, WQ, Q work
+vim.api.nvim_create_user_command('W', 'w', {})
+vim.api.nvim_create_user_command('WQ', 'wq', {})
+vim.api.nvim_create_user_command('Q', 'q', {})
 
 -- Define highlight group (yellow background)
 vim.api.nvim_command("highlight TodoHighlight guifg=Black guibg=Yellow")
