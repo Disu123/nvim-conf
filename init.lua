@@ -36,6 +36,10 @@ vim.keymap.set('n', '<leader>h', ':belowright split | terminal<CR>', { noremap =
 -- F9 disable highlight afre '/' or '?'
 vim.keymap.set('n', '<F9>', ':nohlsearch<CR>', { noremap = true, silent = true })
 
+-- disable the howtodisablemouse menu
+vim.cmd([[aunmenu PopUp.How-to\ disable\ mouse ]])
+vim.cmd([[aunmenu PopUp.-2-]])
+
 -- Define highlight group (yellow background)
 vim.api.nvim_command("highlight TodoHighlight guifg=Black guibg=Yellow")
 -- highligh TODO keyword
