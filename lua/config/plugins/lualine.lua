@@ -7,14 +7,16 @@ return {
       if reg == '' then return '' end
       return 'Recording @' .. reg
     end
-
+    local function show_gitsigns()
+      return vim.b.show_gitsigns_status or ''
+    end
     require('lualine').setup({
       --options = { theme = 'everforest' },
       options = { theme = 'auto'},
       sections = {
         lualine_a = { 'mode' },
         lualine_b = { 'branch' },
-        lualine_c = { 'filename' },
+        lualine_c = { 'filename', show_gitsigns },
         lualine_x = { macro_recording, 'filetype' },
         lualine_y = { 'progress' },
         lualine_z = { 'location' },

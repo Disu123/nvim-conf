@@ -22,14 +22,26 @@ return {
         sorter = "case_sensitive",
       },
       view = {
-        width = 30,
+        width = 25,
         side = "right",
       },
       renderer = {
         group_empty = true,
       },
+      git = {
+        enable = true,
+        ignore = false,
+      },
+        diagnostics = {
+        enable = true,
+        show_on_dirs = true,
+      },
       filters = {
-        dotfiles = true,
+        dotfiles = false,
+      },
+      update_focused_file = {
+        enable = true,
+        update_root = false,
       },
     })
 
